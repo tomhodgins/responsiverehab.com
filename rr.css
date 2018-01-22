@@ -1,0 +1,277 @@
+* {
+  box-sizing: border-box;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-kerning: auto;
+}
+::-moz-selection {
+  color: #fff;
+  text-shadow: darkcyan 0 1px 0;
+  background-color: cyan;
+}
+::-webkit-selection {
+  color: #fff;
+  text-shadow: darkcyan 0 1px 0;
+  background-color: cyan;
+}
+::selection {
+  color: #fff;
+  text-shadow: darkcyan 0 1px 0;
+  background-color: cyan;
+}
+::-webkit-input-placeholder {
+  color: rgba(0, 0, 0, .5);
+}
+::-moz-placeholder {
+  color: rgba(0, 0, 0, .5);
+}
+:-ms-input-placeholder {
+  color: rgba(0, 0, 0, .5);
+}
+:placeholder-shown {
+  color: rgba(0, 0, 0, .5);
+}
+html {
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+  color: white;
+  font-size: 16pt;
+  text-shadow: rgba(0, 0, 0, .1) 0 1px 0;
+  overflow-x: hidden;
+}
+footer {
+  text-align: center;
+}
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  line-height: 1;
+}
+* + h1,
+* + h2,
+* + h3,
+* + h4,
+* + h5,
+* + h6 {
+  margin: 2em 0 1em;
+}
+h1 {
+  margin: .5em auto;
+  max-width: 70vw;
+  color: white;
+  font-size: 10vw;
+  font-weight: bolder;
+}
+p {
+  margin: 0;
+  line-height: 1.4;
+}
+ol,
+ul {
+  margin: 0;
+  list-style: none;
+  padding: 0;
+}
+li {
+  margin: 2em 0;
+  padding: 0 0 0 3em;
+  position: relative;
+}
+li:hover {
+  font-weight: bold;
+}
+li:before {
+  content: attr(data-bullet);
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  font-size: 200%;
+}
+li:hover:before {
+  transform: translateY(-50%) rotateZ(-15deg);
+}
+h2,
+p,
+ol,
+ul {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 700px;
+}
+* + p,
+* + ol,
+* + ul {
+  margin-top: 1em;
+}
+section {
+  display: block;
+  padding: 1em 1em 8em 1em;
+  position: relative;
+}
+section:before,
+section:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: -12em;
+  left: -100%;
+  border: calc(var(--body-offsetWidth) * 1px) solid transparent;
+  border-top-width: 6em;
+  border-bottom-width: 6em;
+  z-index: 50;
+  pointer-events: none;
+}
+section:after {
+  left: 0;
+  border-right-width: 0;
+}
+label {
+  display: block;
+  line-height: 1;
+}
+label span {
+  display: none;
+}
+input {
+  display: block;
+  appearance: none;
+  -webkit-appearance: none;
+  background: white;
+  border: 2px solid transparent;
+  border-radius: 3px;
+  padding: .5em;
+  margin: 0 auto;
+  width: 300px;
+  max-width: 100%;
+  font-size: 16pt;
+}
+input:focus,
+input:active {
+  outline: none;
+  border: 2px solid orange;
+}
+input[type=url],
+input[type=email] {
+  width: 100%;
+  max-width: 400px;
+}
+form {
+  margin: 2em 0 0 0;
+}
+label {
+  display: block;
+  margin: 1em;
+}
+label input {
+  margin-top: .5em;
+}
+input[type=submit] {
+  background: hsl(22,86%,50%);
+  color: white;
+  cursor: pointer;
+  padding: .5em .75em;
+  word-wrap: break-word;
+}
+input[type=submit]:hover,
+input[type=submit]:hover {
+  background: orange;
+  color: white;
+}
+input[type=submit]:focus {
+  background: orange;
+  border-color: orange;
+  color: white;
+}
+input[type=submit]:active {
+  border-color: orange;
+  background: hsl(10,85%,50%);
+}
+.jumbo {
+  font-size: 18pt;
+}
+.jumbo img {
+  display: block;
+  margin: 0 auto 1em;
+  width: 50%;
+  max-width: 150px;
+  border-radius: 15px;
+}
+#hero {
+  text-align: center;
+  padding-bottom: 6em;
+  background: linear-gradient(
+    -159deg,
+    hsl(259,86%,50%) 0%,
+    hsl(167,90%,50%) 100%
+  );
+}
+#hero h2 {
+  font-size: 18pt;
+  font-weight: 400;
+}
+#intro {
+  color: white;
+  background: midnightblue;
+  font-weight: 500;
+}
+#intro:before,
+#intro:after {
+  border-bottom-color: midnightblue;
+}
+#intro a {
+  color: lightcyan;
+  text-shadow: none;
+}
+#intro a:hover {
+  color: dodgerblue;
+}
+#content {
+  background: darkblue;
+}
+#content:before,
+#content:after {
+  border-bottom-color: darkblue;
+}
+#faq {
+  background: indigo;
+}
+#faq:before,
+#faq:after {
+  border-bottom-color: indigo;
+}
+#faq .jumbo {
+  font-weight: 700;
+}
+#faq a {
+  color: lavender;
+}
+#signup {
+  padding-bottom: 4em;
+  background: linear-gradient(
+    0,
+    hsl(255,75%,50%) 0%,
+    hsl(196,90%,50%) 100%
+  );
+  text-align: center;
+}
+#signup:before,
+#signup:after {
+  border-bottom-color: hsl(196,90%,50%);
+}
+@media (min-width: 800px) {
+  section {
+    padding: 2em 1em 10em 1em;
+  }
+  .jumbo img {
+    float: right;
+    margin-bottom: 0;
+    margin-left: 1em;
+    position: relative;
+    bottom: 1em;
+    z-index: 500;
+  }
+}
